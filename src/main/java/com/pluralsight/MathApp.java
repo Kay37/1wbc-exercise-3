@@ -65,6 +65,18 @@ public class MathApp {
         double randomNum = Math.random();
         /// This prints that random number in a nice string.
         System.out.printf("A random number between 0 and 1 is: %f%n", randomNum);
+        /// These are my declared variables for calculating how many minutes are in 24 days.
+        int numberOfDays = 24;
+        int hoursInDay = 24;
+        int minutesPerHour = 60;
+
+        /// This is the calculation of the minutes
+        double totalMinutes = numDays * hoursInDay * minutesPerHour;
+        /// Here I convert to long to get a human readable number (typecasting)
+        long totalMilliseconds = (long) totalMinutes * 60 * 1000;
+
+        System.out.printf("There are %.2f minutes in %d days", totalMinutes, numberOfDays);
+        System.out.printf("There are %d milliseconds in %d days", totalMilliseconds, numberOfDays);
 
     }
 }
